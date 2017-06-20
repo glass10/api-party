@@ -12,11 +12,16 @@ class Github extends Component {
     this.setState({ username })
   }
 
+  handleSubmit = (ev) =>{
+      ev.preventDefault();
+      this.props.history.push(`/github/${this.state.username}`)
+  }
+
   render() {
     return (
       <div className="github">
         <img className="github-logo" src="http://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png" alt="github logo"/>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div>
             <input 
               type="text"
@@ -30,6 +35,7 @@ class Github extends Component {
         </form>
 
         <Route exact path='/github' render={() => <h3>Please enter a username to search on Github</h3>} />
+        <Route path='/github/:username' render={(props) => <h3>You searched for {props.match.params.username}</h3>} />
       </div>
     )
   }
