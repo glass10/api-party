@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import './GithubUser.css'
 
-class GithubUser extends Component {
+class StarWarsUser extends Component {
   state = {
     user: {
-      avatar_url: '',
-      login: '',
-      followers: '',
-      following: '',
-      location: '',
-      html_url: '',
+      name: '',
+      birth_year: '',
+      gender: '',
+      hair_color: '',
+      height: '',
+      mass: '',
+      url: ''
     }
   }
   constructor(props) {
@@ -35,14 +36,15 @@ class GithubUser extends Component {
     const { user } = this.state
     return (
       <div className="github-user">
-        <img src={user.avatar_url} alt="user avatar"/>
-        <h2>{user.login}</h2>
-        <h3>followers: {user.followers}</h3>
-        <h3>following: {user.following}</h3>
-        <h3>location: {user.location}</h3>
-        <a href={user.html_url}>Link to {user.login}'s profile</a>
+        <h2>{user.name}</h2>
+        <h3>Birth Year: {user.birth_year}</h3>
+        <h3>Gender: {user.gender}</h3>
+        <h3>Hair Color: {user.hair_color}</h3>
+        <h3>Height: {user.height}</h3>
+        <h3>Mass: {user.mass}</h3>
+        <a href={user.url}>Click to see more about {user.name}</a>
       </div>
     )
   }
 }
-export default GithubUser
+export default StarWarsUser
