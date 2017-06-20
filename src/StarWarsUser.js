@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './GithubUser.css'
 
+let self;
+
 class StarWarsUser extends Component {
   state = {
     user: {
@@ -17,17 +19,24 @@ class StarWarsUser extends Component {
     super(props)
 
     this.fetchUserData(this.props)
+    self = this;
   }
 
   fetchUserData = (props) => {
-    fetch(`https://api.github.com/users/${props.match.params.username}`)
+    fetch(`http://swapi.co/api/people/?search=${props.match.params.name}`)
       .then(response => response.json())
-      .then(user => this.setState({ user }))
+      .then(function(data){
+        console.log(data);
+        const user = data.results[0];
+        self.setState({ user })
+      })
+    //   .then(user => this.setState({ user }))
+    //   .then(response => console.log(response))
   }
 
   componentWillReceiveProps(nextProps) {
-    const locationChanged = nextProps.location !== this.props.location
-    if (locationChanged) {
+    const nameChanged = nextProps.name !== this.props.name
+    if (nameChanged) {
       this.fetchUserData(nextProps)
     }
   }

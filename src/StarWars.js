@@ -9,9 +9,10 @@ class StarWars extends Component{
         name: ''
     }
 
-    handleChange = (ev) => {
+  handleChange = (ev) => {
     const name = ev.currentTarget.value
     this.setState({ name })
+    console.log(name);
   }
 
   handleSubmit = (ev) => {
