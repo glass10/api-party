@@ -1,0 +1,13 @@
+.starwars-user img{
+    height: 200px;
+    border-radius: 50%;
+}
+
+.starwars-user h3{
+    font-family: "Audiowide";
+    color: #999;
+}
+
+.starwars-user h2{
+    font-family: "Audiowide";
+}

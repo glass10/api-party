@@ -1,0 +1,35 @@
+.starwars {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.starwars-logo {
+    width: 100%;
+    max-width: 500px;
+}
+
+.starwars input {
+    font-family: "AudioWide";
+    box-sizing: border-box;
+    width: 80%;
+    padding: 10px;
+    font-size: 24px;
+    background-clip: padding-box;
+    border-color: rgba(0,0,0,0.25);
+    border-radius: 5px;
+    line-height: 20px;
+    border: 1px solid #d1d5da;
+}
+
+.starwars button {
+    color: white;
+    margin-top: 10px;
+    width: 80%;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: 1px solid #01638f;
+    margin-bottom: 50px;
+    background-color: #0184be;
+    font-family: "Audiowide";
+}

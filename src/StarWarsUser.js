@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './GithubUser.css'
+import './StarWarsUser.css'
 
 let self;
 
@@ -61,7 +61,7 @@ class StarWarsUser extends Component {
   render() {
     const { user } = this.state
     return (
-      <div className="github-user">
+      <div className="starwars-user">
         <h2>{user.name}</h2>
         <h3>Birth Year: {user.birth_year}</h3>
         <h3>Gender: {user.gender}</h3>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import './Github.css'
+import './StarWars.css'
 
 import StarWarsUser from './StarWarsUser'
 
@@ -20,8 +20,8 @@ class StarWars extends Component{
   }
     render(){
         return(
-            <div className="github">
-                <img className="github-logo" src="http://logos-download.com/wp-content/uploads/2016/09/Star_Wars_logo_logotype.png" alt="star wars logo"/>
+            <div className="starwars">
+                <img className="starwars-logo" src="http://logos-download.com/wp-content/uploads/2016/09/Star_Wars_logo_logotype.png" alt="star wars logo"/>
                 <form onSubmit={this.handleSubmit}>
                 <div>
                     <input 
