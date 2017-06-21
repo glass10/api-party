@@ -22,9 +22,9 @@ class App extends Component {
             <li>
               <NavLink to={'/nasa'}>NASA API</NavLink>
             </li>
-            <li>
+            {/*<li>
               <NavLink to={'/homework'}>Homework</NavLink>
-            </li>
+            </li>*/}
             <li>
               <NavLink to={'/starwars'}>Star Wars</NavLink>
             </li>
